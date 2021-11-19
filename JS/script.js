@@ -29,7 +29,7 @@ if (EtaPasseggero < 18) {
   // proiezione a schermo
   document.getElementById('Prezzo').innerHTML = 'Questo è il prezzo ' + PrezzoSenior + ' €';
 } else {
-  console.log('prezzo intero', PrezzoBigliettoBase);
+  console.log('prezzo intero', PrezzoBigliettoBase, '€');
   // proiezione a schermo
   document.getElementById('Prezzo').innerHTML = 'Questo è il prezzo ' + PrezzoBigliettoBase + ' €';
 }
