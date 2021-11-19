@@ -24,7 +24,7 @@ if (EtaPasseggero < 18) {
   document.getElementById('Prezzo').innerHTML = 'Questo è il prezzo ' + PrezzoJunior + ' €';
 } else if (EtaPasseggero > 65) {
   let PrezzoSenior = (PrezzoBigliettoBase * 40) / 100;
-  PrezzoSenior = parseInit(PrezzoBigliettoBase - PrezzoSenior).toFixed(2);
+  PrezzoSenior = parseInt(PrezzoBigliettoBase - PrezzoSenior).toFixed(2);
   console.log('prezzo senior', PrezzoSenior, ' €');
   // proiezione a schermo
   document.getElementById('Prezzo').innerHTML = 'Questo è il prezzo ' + PrezzoSenior + ' €';
