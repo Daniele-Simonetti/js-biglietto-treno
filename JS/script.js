@@ -7,13 +7,28 @@
 
 
 // 1.chiedere all'utente il numero di chilometri che vuole percorrere
-let NumeroKm = prompt('Indica il numero di KM da percorrere');
+let NumeroKm = parseInt(prompt('Indica il numero di KM da percorrere'));
 console.log('numero di chilometri', NumeroKm);
 // 2.chiedere l'età del passeggero
-let EtaPasseggero = prompt('Indica età del passeggero');
+let EtaPasseggero = parseInt(prompt('Indica età del passeggero'));
 console.log('Età del passeggero', EtaPasseggero);
 // 3.calcola il prezzo del biglietto per il numero di km
-let PrezzoKm = NumeroKm * 0.21;
-console.log('Prezzo dei chilometri in euro', PrezzoKm, '€');
-// 4.aggiungere le due varianti degli sconti
-if (EtaPasseggero > )
+let PrezzoBigliettoBase = NumeroKm * 0.21;
+console.log('Prezzo dei chilometri in euro', PrezzoBigliettoBase, '€');
+// 4.applicare le due varianti degli sconti
+if (EtaPasseggero < 18) {
+  let PrezzoJunior = (PrezzoBigliettoBase * 20) / 100;
+  PrezzoJunior = PrezzoBigliettoBase - PrezzoJunior;
+  console.log('prezzo junior', PrezzoJunior, '€');
+  document.getElementById('Prezzo').innerHTML = PrezzoJunior;
+} else if (EtaPasseggero > 65) {
+  let PrezzoSenior = (PrezzoBigliettoBase * 40) / 100;
+  PrezzoSenior = PrezzoBigliettoBase - PrezzoSenior;
+  console.log('prezzo senior', PrezzoSenior, '€');
+  document.getElementById('Prezzo').innerHTML = PrezzoSenior;
+} else {
+  console.log('prezzo intero', PrezzoBigliettoBase);
+  document.getElementById('Prezzo').innerHTML = PrezzoBigliettoBase;
+}
+// 5.proiettare a schermo il prezzo
+
